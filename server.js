@@ -4,7 +4,7 @@
 * No part of this assignment has been copied manually or electronically from any other source
 * (including web sites) or distributed to other students.
 *
-* Name: Yash Shah   Student ID: __171469224__________   Date: ________________
+* Name: Yash Shah   Student ID: __171469224__________   Date: _____21-5-2025___________
 * Vercel Link: _______________________________________________________________
 ********************************************************************************/
 
@@ -31,6 +31,7 @@ app.get('/', (req, res) => {
 // Initialize the database connection before starting the server
 moviesDB.initialize(process.env.MONGODB_CONN_STRING)
   .then(() => {
+    
     // POST /api/movies
     app.post('/api/movies', async (req, res) => {
       try {
@@ -102,3 +103,5 @@ moviesDB.initialize(process.env.MONGODB_CONN_STRING)
   .catch((err) => {
     console.error(`Failed to initialize the database: ${err.message}`);
   });
+
+  
